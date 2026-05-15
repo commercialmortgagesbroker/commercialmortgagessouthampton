@@ -1,0 +1,534 @@
+@import "tailwindcss";
+
+/*
+  Redesign v2 — "Editorial Confidence"
+  -----------------------------------
+  Warm paper background, near-black ink, per-site accent.
+  Editorial serif headings + humanist sans body + monospace figures.
+  Distinctive from the main CC site (navy/gold/Playfair) and from
+  competitor finance brokers (generic corporate navy/blue).
+
+  Per-site accent is the single variable that differs between the
+  67 network sites. Manchester defaults below; sibling sites override
+  via src/data/site-config.ts + the --accent CSS var on :root.
+*/
+
+@theme inline {
+  /* Surface */
+  --color-paper: #f7f5f1;
+  --color-paper-deep: #efece6;
+  --color-ink: #0e0e12;
+  --color-ink-soft: #25252e;
+  --color-muted: #5c5951;
+  --color-rule: #e6e1d8;
+  --color-white: #ffffff;
+
+  /* Accent — overridden per-site via inline :root style. Default = Manchester teal. */
+  --color-accent: #16877a;
+  --color-accent-soft: #e6f5f2;
+  --color-accent-deep: #0d5d54;
+
+  /* Status (finance context: use sparingly) */
+  --color-positive: #2a6f4f;
+  --color-warning: #a6620f;
+
+  /* Typography stacks */
+  --font-serif: "Fraunces", "Crimson Pro", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+
+  /* Tailwind semantic aliases */
+  --color-primary: var(--color-ink);
+  --color-secondary: var(--color-accent);
+  --color-light: var(--color-paper);
+  --color-dark: var(--color-ink);
+  --font-heading: var(--font-serif);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv05" on, "cv08" on, "ss01" on;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle paper grain — strips the digital flatness */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/*
+  Heading typography only — NO color. Headings inherit colour from their
+  parent (body sets ink by default; sections like `bg-primary text-white`
+  override for their subtree). If we set a heading colour here — even at 0
+  specificity via :where() — it intercepts inheritance and any `text-white`
+  on a wrapping section never reaches the heading. That regressed every
+  service-page hero ("Stretch Senior Finance in Manchester" etc. went
+  invisible on dark bg).
+*/
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.08;
+}
+
+:where(h1) { font-weight: 400; letter-spacing: -0.024em; }
+
+/*
+  Explicit legacy utility colours. Tailwind v4 @theme inline should generate
+  these from --color-primary / --color-secondary / --color-accent, but in
+  practice the regeneration is unreliable when legacy classes are mixed with
+  arbitrary-value utilities — so we define them directly as a belt-and-braces
+  guarantee. Specificity is low (single class) so Tailwind utilities still win.
+*/
+.text-primary { color: var(--color-ink); }
+.text-secondary { color: var(--color-accent); }
+.text-accent { color: var(--color-accent); }
+.bg-primary { background-color: var(--color-ink); }
+.bg-secondary { background-color: var(--color-accent); }
+.bg-accent { background-color: var(--color-ink); }
+.bg-light { background-color: var(--color-paper); }
+.border-primary { border-color: var(--color-ink); }
+.border-secondary { border-color: var(--color-accent); }
+
+.font-editorial {
+  font-family: var(--font-serif);
+  font-feature-settings: "ss01", "ss02";
+}
+
+/* Monospace figures — used for money / LTV / LTC etc. */
+.fig, .font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" on, "zero" on;
+  letter-spacing: -0.01em;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Layout primitives ──────────────────────────────────────────── */
+
+.container-editorial {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-editorial { padding-inline: 2rem; }
+}
+
+.section {
+  padding-block: 4.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .section { padding-block: 6.5rem; }
+}
+
+.section-tight { padding-block: 3rem; }
+@media (min-width: 768px) { .section-tight { padding-block: 4.5rem; } }
+
+/* Editorial rule — single horizontal line as section divider */
+.rule {
+  display: block;
+  height: 1px;
+  background: var(--color-rule);
+  border: 0;
+  width: 100%;
+}
+
+.rule-thick { height: 4px; background: var(--color-ink); width: 56px; border-radius: 1px; }
+.rule-accent { height: 4px; background: var(--color-accent); width: 56px; border-radius: 1px; }
+
+/* Editorial eyebrow label */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  transition: transform 0.18s cubic-bezier(0.2, 0, 0.1, 1),
+              background-color 0.2s,
+              color 0.2s,
+              box-shadow 0.2s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.btn-primary:hover {
+  background: var(--color-accent);
+  box-shadow: 0 8px 24px -12px var(--color-accent);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+.btn-accent:hover {
+  background: var(--color-accent-deep);
+  box-shadow: 0 8px 24px -12px var(--color-accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+.btn-ghost:hover { background: var(--color-ink); color: var(--color-paper); }
+
+/* ─── Card styles ────────────────────────────────────────────────── */
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-rule);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -24px rgba(14, 14, 18, 0.18);
+  border-color: color-mix(in oklch, var(--color-accent), transparent 50%);
+}
+
+.card-bare {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* ─── Big number typography (stats bands) ────────────────────────── */
+
+.figure-display {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  font-feature-settings: "tnum" on;
+}
+
+.figure-large {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-feature-settings: "tnum" on;
+}
+
+.figure-inline {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" on;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+/* ─── Marquee / data band ────────────────────────────────────────── */
+
+.data-band {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 1.25rem 0;
+  border-block: 1px solid var(--color-ink);
+}
+
+.data-band .eyebrow { color: color-mix(in oklch, var(--color-paper), transparent 60%); }
+.data-band .fig,
+.data-band .figure-inline,
+.data-band .figure-display,
+.data-band .figure-large { color: var(--color-paper); }
+
+/* ─── Hero ───────────────────────────────────────────────────────── */
+
+.hero-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.028em;
+}
+
+.hero-display em {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+/* ─── Form controls ──────────────────────────────────────────────── */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: var(--color-rule);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--color-paper);
+  box-shadow: 0 0 0 1px var(--color-accent);
+  transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--color-paper);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+  background: var(--color-white);
+  outline: none;
+}
+
+/* ─── Scroll-reveal ──────────────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0, 0.05, 1),
+              transform 0.8s cubic-bezier(0.2, 0, 0.05, 1);
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0, 0.05, 1),
+              transform 0.7s cubic-bezier(0.2, 0, 0.05, 1);
+}
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0, 0.05, 1),
+              transform 0.7s cubic-bezier(0.2, 0, 0.05, 1);
+}
+.reveal-right.revealed { opacity: 1; transform: translateX(0); }
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.7s cubic-bezier(0.2, 0, 0.05, 1),
+              transform 0.7s cubic-bezier(0.2, 0, 0.05, 1);
+}
+.reveal-scale.revealed { opacity: 1; transform: scale(1); }
+
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+.stagger-5 { transition-delay: 0.25s; }
+.stagger-6 { transition-delay: 0.3s; }
+
+/* ─── Scrollbar ──────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-paper-deep); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 5px;
+  border: 2px solid var(--color-paper-deep);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-muted); }
+
+/* ─── Accent-line legacy helper (kept for existing components) ───── */
+
+.accent-line {
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 1px;
+}
+.accent-line-center {
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 1px;
+  margin-inline: auto;
+}
+
+/* Legacy section-padding compatibility */
+.section-padding { padding: 4.5rem 1.5rem; }
+@media (min-width: 768px) { .section-padding { padding: 6.5rem 2rem; } }
+
+/* ─── Reduced motion ─────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ─── Blog post body styling ─────────────────────────────────── */
+.prose-blog h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+}
+.prose-blog h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-ink);
+}
+.prose-blog p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-ink-soft);
+  font-size: 1.0625rem;
+}
+.prose-blog ul, .prose-blog ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: var(--color-ink-soft);
+}
+.prose-blog ul { list-style: disc; }
+.prose-blog ol { list-style: decimal; }
+.prose-blog li { margin-bottom: 0.4rem; line-height: 1.65; }
+.prose-blog strong { color: var(--color-ink); font-weight: 600; }
+.prose-blog a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.prose-blog a:hover { color: var(--color-accent); }
+.prose-blog blockquote {
+  border-left: 4px solid var(--color-accent);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-ink);
+}
+.prose-blog code {
+  background: var(--color-paper-deep);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+.prose-blog hr {
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  margin: 2.5rem 0;
+}
+.prose-blog img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 0.5rem; }
+.prose-blog table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+.prose-blog table th, .prose-blog table td { border-bottom: 1px solid var(--color-rule); padding: 0.75rem 1rem; text-align: left; }
+.prose-blog table th { background: var(--color-paper-deep); font-weight: 500; }

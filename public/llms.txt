@@ -1,0 +1,39 @@
+# Commercial Mortgages Southampton
+> Specialist commercial mortgage broker for Southampton, the Solent corridor and Hampshire. Port and logistics, retail, hospitality, semi-commercial, HMO portfolio, healthcare and trading-business commercial mortgages from a 90+ lender panel including Shawbrook, InterBay Commercial, LendInvest, Cynergy Bank, Lloyds, NatWest, Barclays and Santander. Indicative terms in 48 hours, completion typically 4 to 8 weeks.
+
+## Content Hierarchy
+- /: Homepage with Southampton market snapshot, live planning pipeline, calculator, lender panel, area grid, case studies, testimonials, FAQ
+- /services/: Commercial mortgage product hub
+- /property-types/: Coverage by sector
+- /areas/: Southampton sub-areas with commercial planning and market data
+- /calculator/: Commercial mortgage repayment and LTV calculator
+- /blog/: Market commentary and rate insights
+- /case-studies/: Anonymised real deals
+- /about/: Broker bio and credentials
+- /how-it-works/: 5-step process
+- /contact/: Enquiry form
+- /faq/: Frequently asked questions
+
+## Key Facts
+- Service: Commercial mortgages
+- Coverage: Southampton, Eastleigh fringe, Hedge End / West End, the Solent corridor and wider Hampshire
+- Facility size: £150K to £10M
+- Term: 5 to 25 years
+- LTV: typically 65 to 75% (semi-commercial up to 75%, hospitality and trading-business 60 to 70%, industrial 65 to 70%)
+- Rates (mid-2026): 6.0 to 9.0% pa
+- Lender panel: 90+ lenders
+- Decision time: indicative terms in 48 hours
+- Named lenders: Shawbrook, InterBay Commercial, LendInvest, Cynergy Bank, Lloyds, NatWest, Barclays, Santander, plus 80+ others
+
+## Data
+Each area page contains live local market data:
+- Land Registry sold-data signal (residential transaction volume as market temperature)
+- Live commercial planning pipeline from Southampton City Council
+- Named regeneration zones and business districts (Mayflower Quarter, Ocean Village, Westquay, Bargate Quarter, Adanac Park, Nursling)
+- Lender appetite by sector (port and logistics, hospitality, HMO, healthcare)
+
+## Contact
+- Phone: 07595 366094
+- Email: enquiries@commercialmortgagessouthampton.co.uk
+- Site: https://commercialmortgagessouthampton.co.uk
+- Network parent: https://commercialmortgagesbroker.co.uk

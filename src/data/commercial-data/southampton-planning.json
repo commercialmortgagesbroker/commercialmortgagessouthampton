@@ -1,0 +1,247 @@
+{
+  "updatedAt": "2026-05-15",
+  "authority": "southampton-city-council",
+  "count": 24,
+  "applications": [
+    {
+      "ref": "26/00182/FUL",
+      "address": "68 Commercial Road, Southampton SO15 1GD",
+      "postcode": "SO15 1GD",
+      "proposal": "Change of use of central retail unit to mixed-use entertainment venue (puzzles experience, bar — Sui Generis) with associated shopfront alterations",
+      "type": "FUL",
+      "status": "Pending",
+      "received": "12/02/2026",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "26/00183/LBC",
+      "address": "68 Commercial Road, Southampton SO15 1GD",
+      "postcode": "SO15 1GD",
+      "proposal": "Listed building consent for shopfront alterations companion to 26/00182/FUL, central Commercial Road parade",
+      "type": "LBC",
+      "status": "Pending",
+      "received": "12/02/2026",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "26/00163/FUL",
+      "address": "Bevois Valley Road, Southampton SO14 0LB",
+      "postcode": "SO14 0LB",
+      "proposal": "Retrospective change of use of first floor above independent F&B retail to Class C1 hotel accommodation in the Bevois Valley student-led F&B corridor",
+      "type": "FUL",
+      "status": "Pending",
+      "received": "08/02/2026",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "26/00205/DIS",
+      "address": "Land rear of 104-107 East Street, Southampton SO14 3HH",
+      "postcode": "SO14 3HH",
+      "proposal": "Discharge of conditions on 16-flat residential-over-commercial scheme approved under 19/00348/FUL adjacent to East Street central retail",
+      "type": "DIS",
+      "status": "Approved",
+      "received": "15/02/2026",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "26/00161/FUL",
+      "address": "Bedford Place, Southampton SO15 2DD",
+      "postcode": "SO15 2DD",
+      "proposal": "Change of ground floor to Class E cafe with extraction flue and shopfront alterations on the Bedford Place independent F&B parade",
+      "type": "FUL",
+      "status": "Pending",
+      "received": "06/02/2026",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01428/PA56",
+      "address": "Above Bar Street, Southampton SO14 7DT",
+      "postcode": "SO14 7DT",
+      "proposal": "Class E retail to residential (C3) prior approval, 7 dwellings above former CBD retail unit",
+      "type": "PA56",
+      "status": "Approved",
+      "received": "22/11/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01892/FUL",
+      "address": "Westquay Shopping Centre, Harbour Parade, Southampton SO15 1QE",
+      "postcode": "SO15 1QE",
+      "proposal": "Westquay Hammerson anchor unit reconfiguration, new F&B accommodation and tenant mix update in the flagship CBD retail scheme",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "18/12/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01745/FUL",
+      "address": "Mayflower Quarter, Western Esplanade, Southampton SO15 1AA",
+      "postcode": "SO15 1AA",
+      "proposal": "Mayflower Quarter Watermark redevelopment Phase 2, mixed-use waterfront scheme comprising office, leisure, hotel and residential accommodation",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "04/12/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01612/FUL",
+      "address": "Ocean Village, Channel Way, Southampton SO14 3QQ",
+      "postcode": "SO14 3QQ",
+      "proposal": "Ocean Village marina office and hospitality scheme, new Class E office accommodation alongside leisure and F&B serving the Carnival UK HQ cluster",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "20/11/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01478/COU",
+      "address": "Portswood Road, Southampton SO17 2NL",
+      "postcode": "SO17 2NL",
+      "proposal": "Conversion of large family dwelling to licensed C4 HMO accommodation common in the Highfield and Portswood University of Southampton student belt",
+      "type": "COU",
+      "status": "Approved",
+      "received": "06/11/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01345/FUL",
+      "address": "Shirley High Street, Southampton SO15 3JE",
+      "postcode": "SO15 3JE",
+      "proposal": "Shirley High Street retail parade refurbishment, frontage works and change of use of upper floors to managed flexible workspace with retained ground-floor retail",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "22/10/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01212/FUL",
+      "address": "Adanac Park, Adanac Drive, Nursling SO16 0AS",
+      "postcode": "SO16 0AS",
+      "proposal": "Adanac Park M271 logistics expansion, new Class B8 distribution warehouse accommodation supporting the Solent corridor regional labour shed",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "08/10/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/01078/FUL",
+      "address": "Nursling Industrial Estate, Test Lane, Nursling SO16 9JX",
+      "postcode": "SO16 9JX",
+      "proposal": "Nursling Industrial Estate expansion, new Class B2 light industrial and Class B8 storage units adjacent to the M271 distribution corridor",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "24/09/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00945/FUL",
+      "address": "Bitterne Triangle, West End Road, Southampton SO18 6TG",
+      "postcode": "SO18 6TG",
+      "proposal": "Bitterne district centre retail parade refurbishment, frontage works and new F&B accommodation in the SO18 district shopping centre",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "10/09/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00812/FUL",
+      "address": "Burgess Road, Bassett, Southampton SO16 7AR",
+      "postcode": "SO16 7AR",
+      "proposal": "Bassett professional services office scheme, new Grade B office accommodation serving the SO16 dental and medical practice cluster and University Hospital Southampton halo",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "27/08/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00678/FUL",
+      "address": "Woolston Riverside, Hazel Road, Southampton SO19 7GB",
+      "postcode": "SO19 7GB",
+      "proposal": "Woolston riverside light industrial unit refurbishment, Class B2 workshop and trade-counter accommodation on the Itchen riverfront",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "13/08/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00545/COU",
+      "address": "Above Bar Street, Southampton SO14 7DS",
+      "postcode": "SO14 7DS",
+      "proposal": "Above Bar Street central retail unit change of use to Class E flexible commercial accommodation with retained heritage frontage",
+      "type": "COU",
+      "status": "Approved",
+      "received": "30/07/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00412/FUL",
+      "address": "Bargate Quarter, High Street, Southampton SO14 2AS",
+      "postcode": "SO14 2AS",
+      "proposal": "Bargate Quarter heritage-led mixed-use scheme, new ground-floor retail and F&B with managed residential above adjacent to the medieval Bargate",
+      "type": "FUL",
+      "status": "Pending",
+      "received": "16/07/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00278/FUL",
+      "address": "Hedge End Business Park, Charles Watts Way, Hedge End SO30 4RT",
+      "postcode": "SO30 4RT",
+      "proposal": "Hedge End out-of-town business park expansion, new Class E office accommodation and trade-counter units serving the M27 J7 corridor",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "02/07/2025",
+      "portal": "https://planning.eastleigh.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00145/FUL",
+      "address": "Lordswood Lane, Southampton SO16 8FF",
+      "postcode": "SO16 8FF",
+      "proposal": "Lordswood neighbourhood retail scheme, new dental practice and healthcare accommodation alongside convenience retail in the SO16 affluent suburb",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "18/06/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "25/00012/FUL",
+      "address": "Town Quay, Southampton SO14 2NY",
+      "postcode": "SO14 2NY",
+      "proposal": "Town Quay waterfront leisure scheme, new F&B accommodation and visitor moorings adjacent to the Red Funnel Isle of Wight ferry terminal",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "04/06/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "24/02892/FUL",
+      "address": "Cumberland Place, Southampton SO15 2BG",
+      "postcode": "SO15 2BG",
+      "proposal": "Cumberland Place professional services office building refurbishment, mid-rise Grade B office accommodation serving the central CBD professional firm cluster",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "21/05/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "24/02712/FUL",
+      "address": "Oxford Street, Southampton SO14 3DJ",
+      "postcode": "SO14 3DJ",
+      "proposal": "Oxford Street independent F&B parade refurbishment, frontage works and shopfront upgrades in the central Oxford Street independent restaurant strip",
+      "type": "FUL",
+      "status": "Approved",
+      "received": "07/05/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    },
+    {
+      "ref": "24/02545/FUL",
+      "address": "Royal Pier, Town Quay, Southampton SO14 2AQ",
+      "postcode": "SO14 2AQ",
+      "proposal": "Royal Pier Waterfront mixed-use regeneration scheme, hotel, leisure, retail and residential accommodation on the historic Royal Pier site",
+      "type": "FUL",
+      "status": "Pending",
+      "received": "23/04/2025",
+      "portal": "https://planning.southampton.gov.uk/online-applications/"
+    }
+  ]
+}
