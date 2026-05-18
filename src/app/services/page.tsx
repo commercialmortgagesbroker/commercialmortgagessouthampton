@@ -153,7 +153,7 @@ export default function ServicesPage() {
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-gray-700">
                 Commercial mortgage economics vary materially by asset class
-                \u2014 lender pools, LTV caps, DSCR/ICR thresholds and pricing all
+                — lender pools, LTV caps, DSCR/ICR thresholds and pricing all
                 shift with the property type. Each of our services applies
                 across the full range of {loc} asset classes.
               </p>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
                       {a.name}
                     </p>
                     <p className="mt-1 text-xs text-secondary">
-                      Explore \u2192
+                      Explore →
                     </p>
                   </Link>
                 </ScrollReveal>
@@ -193,7 +193,7 @@ export default function ServicesPage() {
                   key={i}
                   className={`${i === 0 ? "mt-6" : "mt-4"} text-lg leading-relaxed text-gray-700`}
                 >
-                  {p.replace(/&mdash;/g, "\u2014")}
+                  {p.replace(/&mdash;/g, "—")}
                 </p>
               ))}
             </ScrollReveal>

@@ -269,8 +269,8 @@ export default function HomePage() {
                   />
                   <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:var(--color-paper)]/75">
                     {homeContent.finalCta.body
-                      .replace(/&rsquo;/g, "\u2019")
-                      .replace(/&mdash;/g, "\u2014")}
+                      .replace(/&rsquo;/g, "'")
+                      .replace(/&mdash;/g, "—")}
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3 md:justify-end">

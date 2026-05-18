@@ -40,7 +40,7 @@ export default function FaqPage() {
               {loc} Commercial Mortgage FAQ
             </h1>
             <p className="mt-6 text-xl leading-relaxed text-gray-300">
-              The answers to the questions we get asked most often \u2014
+              The answers to the questions we get asked most often —
               grouped by topic so you can skim straight to what matters.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function FaqPage() {
             Question not answered here?
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Send us your deal and we\u2019ll come back within 48 hours.
+            Send us your deal and we'll come back within 48 hours.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
