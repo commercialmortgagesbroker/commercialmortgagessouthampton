@@ -7,6 +7,7 @@ import { siteConfig } from "@/data/site-config";
 export function LeadCaptureForm() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [transitioning, setTransitioning] = useState(false);
   const [formData, setFormData] = useState({
     loanAmount: "750000",
@@ -37,6 +38,7 @@ export function LeadCaptureForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
     setTransitioning(true);
     const fd = new FormData(e.currentTarget);
     try {
@@ -56,9 +58,32 @@ export function LeadCaptureForm() {
           postcode: "",
         }),
       });
-      if (!res.ok) throw new Error("Submit failed");
+
+      // Always read the body so server diagnostics surface in the browser console.
+      const payload = await res.json().catch(() => null);
+      if (!res.ok || !payload?.success) {
+        console.error("[lead-form] submission failed", {
+          status: res.status,
+          ok: res.ok,
+          payload,
+        });
+        setError(
+          "Sorry, something went wrong sending your enquiry. Please call us or try again."
+        );
+        setTransitioning(false);
+        return;
+      }
+      console.info(
+        "[lead-form] submission succeeded",
+        payload?.diagnostics ?? payload
+      );
     } catch (err) {
-      console.error("Form submission error:", err);
+      console.error("[lead-form] network/exception during submission:", err);
+      setError(
+        "Sorry, something went wrong sending your enquiry. Please call us or try again."
+      );
+      setTransitioning(false);
+      return;
     }
     setSubmitted(true);
   };
@@ -299,6 +324,14 @@ export function LeadCaptureForm() {
               />
             </div>
 
+            {error && (
+              <p
+                role="alert"
+                className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700"
+              >
+                {error}
+              </p>
+            )}
             <div className="flex gap-3">
               <button
                 type="button"
