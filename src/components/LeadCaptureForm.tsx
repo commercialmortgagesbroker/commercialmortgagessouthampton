@@ -4,19 +4,24 @@ import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/data/site-config";
 
+const isValidEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+
 export function LeadCaptureForm() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+  // Tracks whether the early "contact-only" lead has already been sent, so we
+  // never fire it twice if the visitor steps back and forward again.
+  const [partialSent, setPartialSent] = useState(false);
   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
     loanAmount: "750000",
     propertyType: "owner-occupier-commercial",
     dealType: "purchase",
     location: "",
-    name: "",
-    email: "",
-    phone: "",
     description: "",
   });
 
@@ -36,25 +41,85 @@ export function LeadCaptureForm() {
     }, 200);
   };
 
+  // Fire-and-forget early capture: the moment we have valid contact details we
+  // save the lead, so an abandoned step 2 still leaves us a usable enquiry.
+  // Deliberately non-blocking — the UI advances immediately; only the console
+  // records a failure (the full submit on step 2 is the user-facing path).
+  const capturePartialLead = async () => {
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: `${siteConfig.ghlSource} — PARTIAL (contact only)`,
+          fullName: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message:
+            "Partial submission — visitor provided contact details but has not yet completed the deal details. Follow up.",
+          postcode: "",
+        }),
+      });
+      const payload = await res.json().catch(() => null);
+      if (!res.ok || !payload?.success) {
+        console.error("[lead-form] partial capture failed", {
+          status: res.status,
+          payload,
+        });
+      } else {
+        console.info(
+          "[lead-form] partial capture saved",
+          payload?.diagnostics ?? payload
+        );
+      }
+    } catch (err) {
+      console.error("[lead-form] partial capture network error:", err);
+    }
+  };
+
+  const handleContinue = () => {
+    // Validate the essentials before advancing — these inputs sit in step 1, so
+    // the native form-submit validation never runs for the "Continue" button.
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      setError("Please enter your name, email and phone number to continue.");
+      return;
+    }
+    if (!isValidEmail(formData.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    setError(null);
+
+    // Save the contact-only lead once, in the background, then move on.
+    if (!partialSent) {
+      setPartialSent(true);
+      void capturePartialLead();
+    }
+
+    goToStep(2);
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setTransitioning(true);
-    const fd = new FormData(e.currentTarget);
+    // Read from controlled component state, not a FormData snapshot of the form:
+    // step-1 inputs are unmounted once we are on step 2, so a snapshot would
+    // drop the contact details. `formData` retains every value across steps.
     try {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           source: siteConfig.ghlSource,
-          fullName: (fd.get("name") as string) || "",
-          email: (fd.get("email") as string) || "",
-          phone: (fd.get("phone") as string) || "",
-          loanAmount: (fd.get("loanAmount") as string) || "",
-          serviceType: (fd.get("propertyType") as string) || "",
-          area: (fd.get("location") as string) || "",
-          message: (fd.get("description") as string) || "",
-          exitStrategy: (fd.get("dealType") as string) || "",
+          fullName: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          loanAmount: formData.loanAmount,
+          serviceType: formData.propertyType,
+          area: formData.location,
+          message: formData.description,
+          exitStrategy: formData.dealType,
           postcode: "",
         }),
       });
@@ -179,6 +244,77 @@ export function LeadCaptureForm() {
         {step === 1 && (
           <div className="space-y-5">
             <h3 className="font-editorial text-xl text-[color:var(--color-ink)]">
+              Your contact details
+            </h3>
+            <p className="text-sm text-[color:var(--color-muted)]">
+              Leave your details and we&apos;ll be in touch — even if you only
+              get this far, we&apos;ll follow up.
+            </p>
+
+            <div>
+              <label className="mb-1 block text-sm font-semibold text-[color:var(--color-ink)]">
+                Full name
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className={inputClass}
+              />
+            </div>
+
+            <div>
+              <label className="mb-1 block text-sm font-semibold text-[color:var(--color-ink)]">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className={inputClass}
+              />
+            </div>
+
+            <div>
+              <label className="mb-1 block text-sm font-semibold text-[color:var(--color-ink)]">
+                Phone number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className={inputClass}
+              />
+            </div>
+
+            {error && (
+              <p
+                role="alert"
+                className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700"
+              >
+                {error}
+              </p>
+            )}
+
+            <button
+              type="button"
+              onClick={handleContinue}
+              className="btn btn-accent w-full"
+            >
+              Continue
+            </button>
+          </div>
+        )}
+
+        {step === 2 && (
+          <div className="space-y-5">
+            <h3 className="font-editorial text-xl text-[color:var(--color-ink)]">
               Tell us about your deal
             </h3>
 
@@ -249,64 +385,6 @@ export function LeadCaptureForm() {
                 onChange={handleChange}
                 placeholder="e.g. SO14, Ocean Village, Bedford Place"
                 className={`${inputClass} placeholder-[color:var(--color-muted)]`}
-              />
-            </div>
-
-            <button
-              type="button"
-              onClick={() => goToStep(2)}
-              className="btn btn-accent w-full"
-            >
-              Continue
-            </button>
-          </div>
-        )}
-
-        {step === 2 && (
-          <div className="space-y-5">
-            <h3 className="font-editorial text-xl text-[color:var(--color-ink)]">
-              Your contact details
-            </h3>
-
-            <div>
-              <label className="mb-1 block text-sm font-semibold text-[color:var(--color-ink)]">
-                Full name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className={inputClass}
-              />
-            </div>
-
-            <div>
-              <label className="mb-1 block text-sm font-semibold text-[color:var(--color-ink)]">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className={inputClass}
-              />
-            </div>
-
-            <div>
-              <label className="mb-1 block text-sm font-semibold text-[color:var(--color-ink)]">
-                Phone number
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className={inputClass}
               />
             </div>
 
