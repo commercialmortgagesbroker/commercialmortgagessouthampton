@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { LoanCalculator } from "@/components/LoanCalculator";
+import { PropertyCalculatorsEmbed } from "@/components/PropertyCalculatorsEmbed";
 import { generateWebApplicationSchema, generateFAQSchema } from "@/lib/schema";
 import { siteConfig } from "@/data/site-config";
 
@@ -77,6 +78,10 @@ export default function CalculatorPage() {
         <div className="container-editorial">
           <ScrollReveal>
             <LoanCalculator />
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.05}>
+            <PropertyCalculatorsEmbed />
           </ScrollReveal>
 
           <div className="mx-auto mt-16 max-w-4xl">
