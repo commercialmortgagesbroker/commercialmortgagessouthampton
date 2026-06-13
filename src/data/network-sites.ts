@@ -91,4 +91,22 @@ export const networkSites = [
     anchorText: "Commercial Mortgages Sheffield",
     relationship: "neighbour",
   },
+  {
+    name: "Commercial Mortgages Bournemouth",
+    url: "https://commercialmortgagesbournemouth.co.uk",
+    anchorText: "Commercial Mortgages Bournemouth",
+    relationship: "neighbour",
+  },
+  {
+    name: "Commercial Mortgages Portsmouth",
+    url: "https://commercialmortgagesportsmouth.co.uk",
+    anchorText: "Commercial Mortgages Portsmouth",
+    relationship: "neighbour",
+  },
+  {
+    name: "Commercial Mortgages Devon",
+    url: "https://commercialmortgagesdevon.co.uk",
+    anchorText: "Commercial Mortgages Devon",
+    relationship: "neighbour",
+  },
 ];

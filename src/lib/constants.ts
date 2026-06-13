@@ -60,6 +60,9 @@ export const NETWORK_LINKS = [
   { href: "https://commercialmortgagescambridge.co.uk", label: "Commercial Mortgages Cambridge" },
   { href: "https://commercialmortgagesbristol.co.uk", label: "Commercial Mortgages Bristol" },
   { href: "https://commercialmortgagescardiff.co.uk", label: "Commercial Mortgages Cardiff" },
+  { href: "https://commercialmortgagesbournemouth.co.uk", label: "Commercial Mortgages Bournemouth" },
+  { href: "https://commercialmortgagesportsmouth.co.uk", label: "Commercial Mortgages Portsmouth" },
+  { href: "https://commercialmortgagesdevon.co.uk", label: "Commercial Mortgages Devon" },
 ];
 
 export const AREAS = [
