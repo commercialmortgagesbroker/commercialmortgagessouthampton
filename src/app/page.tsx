@@ -7,7 +7,6 @@ import { ProductMatrix } from "@/components/ProductMatrix";
 import { LenderPanel } from "@/components/LenderPanel";
 import { TrustBand } from "@/components/TrustBand";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { TestimonialCard } from "@/components/TestimonialCard";
 import { AreaCard } from "@/components/AreaCard";
 import { LoanCalculator } from "@/components/LoanCalculator";
 import { AreaMap } from "@/components/AreaMap";
@@ -220,8 +219,18 @@ export default function HomePage() {
           </ScrollReveal>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {homeContent.testimonials.items.map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 0.08}>
-                <TestimonialCard {...t} />
+              <ScrollReveal key={t.type} delay={i * 0.08}>
+                <figure className="flex h-full flex-col rounded-lg border border-[color:var(--color-rule)] bg-[color:var(--color-white)] p-6 transition-all duration-200 hover:border-[color:var(--color-accent)]/40 hover:shadow-[0_12px_32px_-20px_rgba(14,14,18,0.2)]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em]" style={{ color: "var(--color-accent)" }}>
+                    {t.type}
+                  </p>
+                  <blockquote className="mt-3 grow font-editorial text-lg leading-relaxed text-[color:var(--color-ink)]">
+                    {t.quote}
+                  </blockquote>
+                  <p className="mt-6 border-t border-[color:var(--color-rule)] pt-4 text-xs uppercase tracking-wider text-[color:var(--color-muted)]">
+                    Illustrative example — not a completed transaction
+                  </p>
+                </figure>
               </ScrollReveal>
             ))}
           </div>

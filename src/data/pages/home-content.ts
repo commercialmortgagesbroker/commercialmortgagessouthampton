@@ -55,7 +55,7 @@ export interface HomeContent {
   };
   testimonials: {
     eyebrow: string;
-    items: Array<{ quote: string; name: string; company: string }>;
+    items: Array<{ type: string; quote: string }>;
   };
   faqs: Array<{ question: string; answer: string }>;
   finalCta: {
@@ -125,26 +125,23 @@ export const homeContent: HomeContent = {
   },
 
   testimonials: {
-    eyebrow: "Recent client feedback",
+    eyebrow: "Indicative scenarios",
     items: [
       {
+        type: "Bank-Beat Refinance",
         quote:
-          "We had been quoted 8.1% by our own bank to refinance the Adanac Park warehouse off the M271 spine. The team placed it at 6.75% with a logistics-active challenger, 65% LTV, 20-year term, and walked us through the EBITDA cover model so the deal was sound before legals. No surprises at credit committee.",
-        name: "R. Whittaker",
-        company: "Freight forwarder, Adanac Park, Southampton",
+          "An indicative refinance scenario: Adanac Park warehouse off the M271 spine, improving on the client's own-bank quote of 8.1% to 6.75% with logistics-active challenger, 65% LTV over a 20-year term, with full EBITDA cover modelling completed before legals.",
       },
       {
+        type: "Portfolio Refinance",
         quote:
-          "Refinancing a four-block HMO portfolio on Highfield and Portswood let to University of Southampton and Solent University students, off a maturing 5-year fix. They benchmarked nine lenders, narrowed to three, and got us 70% LTV at 7.15% on a 5-year fix inside a 25-year term. ICR comfortably 145%. Took six weeks start to finish.",
-        name: "S. Khan",
-        company: "Portfolio landlord, Portswood, Southampton",
+          "An indicative portfolio refinance scenario: a four-block HMO portfolio on Highfield and Portswood let to University of Southampton and Solent University students, with nine lenders benchmarked down to three, securing 70% LTV at 7.15% on a 5-year fix inside a 25-year term (ICR 145%), completing in six weeks.",
       },
       {
+        type: "First-Time Freeholder Purchase",
         quote:
-          "First-time freeholder buying my marina hospitality unit off the landlord at Ocean Village. They told me upfront which commercial lenders would and would not touch a single-asset trading business on a short lease, saved me three weeks of chasing. Completed inside seven weeks with a hospitality-active challenger.",
-        name: "J. Whitfield",
-        company: "Hospitality operator, Ocean Village, Southampton",
-      },
+          "An indicative first-time-freeholder scenario: buying my marina hospitality unit off the landlord at Ocean Village, with upfront guidance on which lenders would touch a single-asset trading business on a short lease, completing inside seven weeks with a hospitality-active challenger.",
+      }
     ],
   },
 
