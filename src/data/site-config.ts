@@ -34,7 +34,7 @@ export const siteConfig = {
     "hue": 43
   },
   "stats": [
-    { "value": "£250M+", "label": "Arranged" },
+    { "value": "£400M+", "label": "Arranged" },
     { "value": "90+", "label": "Lenders" },
     { "value": "48hr", "label": "Decisions" },
     { "value": "75%", "label": "Max LTV" }

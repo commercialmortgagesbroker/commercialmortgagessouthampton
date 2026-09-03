@@ -33,7 +33,7 @@ export function TrustBand({
     },
     {
       eyebrow: "Arranged",
-      value: "£250M+",
+      value: "£400M+",
       detail: "In commercial mortgages across the UK.",
     },
     {

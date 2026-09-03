@@ -6,7 +6,7 @@ export const PHONE_NUMBER = "07595 366094";
 export const EMAIL = "enquiries@commercialmortgagessouthampton.co.uk";
 
 export const STATS = {
-  capitalRaised: "£250M+",
+  capitalRaised: "£400M+",
   dealsCompleted: "400+",
   lenderPanel: "90+",
   yearsExperience: "20+",

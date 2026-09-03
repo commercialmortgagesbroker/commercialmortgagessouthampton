@@ -195,6 +195,9 @@ export default function HomePage() {
                   <p className="mt-6 fig text-lg text-[color:var(--color-accent)]">
                     {cs.facility}
                   </p>
+                  <p className="mt-4 border-t border-[color:var(--color-paper)]/10 pt-3 text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-paper)]/50">
+                    Illustrative example — not a completed transaction
+                  </p>
                 </div>
               </ScrollReveal>
             ))}

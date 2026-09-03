@@ -312,14 +312,14 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                     LTV. Student and professional HMO refinance runs
                     65 to 75 percent LTV. Hospitality trading-business
                     runs 60 to 70 percent LTV at the higher pricing
-                    end. <strong>Allica Bank</strong>,{" "}
-                    <strong>HTB</strong>,{" "}
-                    <strong>Cambridge and Counties</strong>,{" "}
-                    <strong>YBS Commercial</strong>,{" "}
-                    <strong>Aldermore</strong>,{" "}
-                    <strong>Paragon</strong>,{" "}
-                    <strong>Together</strong> and{" "}
-                    <strong>OakNorth</strong> are the eight on our
+                    end. Allica Bank,{" "}
+                    HTB,{" "}
+                    Cambridge and Counties,{" "}
+                    YBS Commercial,{" "}
+                    Aldermore,{" "}
+                    Paragon,{" "}
+                    Together and{" "}
+                    OakNorth are the eight on our
                     active panel, with Foundation Home Loans on the
                     wider HMO and portfolio panel.
                   </span>
@@ -930,20 +930,20 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   Pier Waterfront office, retail and hotel product
                   will sit with the clearing-bank corporate desks
                   alongside the larger SME challengers, with{" "}
-                  <strong>Allica Bank</strong>,{" "}
-                  <strong>OakNorth</strong>,{" "}
-                  <strong>Cambridge and Counties</strong> and{" "}
-                  <strong>YBS Commercial</strong> all carrying
+                  Allica Bank,{" "}
+                  OakNorth,{" "}
+                  Cambridge and Counties and{" "}
+                  YBS Commercial all carrying
                   Hampshire and South Coast appetite into the 2
                   million to 15 million pound lot size band on the
                   cleanest cases. Owner-occupier acquisition on
                   smaller floor plates within the scheme footprints
                   and on Adanac Park or Nursling Industrial Estate
                   industrial-warehouse freehold will sit with{" "}
-                  <strong>Allica Bank</strong>,{" "}
-                  <strong>HTB</strong>,{" "}
-                  <strong>Aldermore</strong> and{" "}
-                  <strong>Cambridge and Counties</strong> on the
+                  Allica Bank,{" "}
+                  HTB,{" "}
+                  Aldermore and{" "}
+                  Cambridge and Counties on the
                   more SME-led cases.
                 </p>
               </div>
@@ -1010,10 +1010,10 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   treating the corridor as one. Owner-occupier
                   industrial-warehouse acquisition prices 6.5 to 8.0
                   percent pa at 60 to 70 percent LTV through{" "}
-                  <strong>Allica Bank</strong>,{" "}
-                  <strong>HTB</strong>,{" "}
-                  <strong>Aldermore</strong> and{" "}
-                  <strong>Cambridge and Counties</strong> on the
+                  Allica Bank,{" "}
+                  HTB,{" "}
+                  Aldermore and{" "}
+                  Cambridge and Counties on the
                   cleanest cases. Investment industrial with
                   logistics-covenant tenant runs 6.5 to 7.5 percent pa
                   at 65 to 70 percent LTV.
@@ -1047,9 +1047,9 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   Above Bar Street, Bargate Quarter and East Street
                   shop-with-flats and on Bedford Place and Oxford
                   Street semi-commercial through{" "}
-                  <strong>YBS Commercial</strong>,{" "}
-                  <strong>HTB</strong> and{" "}
-                  <strong>Allica Bank</strong> at up to 75 percent
+                  YBS Commercial,{" "}
+                  HTB and{" "}
+                  Allica Bank at up to 75 percent
                   LTV. Prime Westquay investment with strong national
                   multiple covenants attracts clearing-bank pricing.
                 </p>
@@ -1079,9 +1079,9 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   Trading-business acquisition on Southampton hotels
                   prices 7.5 to 9.0 percent pa at 60 to 70 percent
                   LTV through{" "}
-                  <strong>Cambridge and Counties</strong>,{" "}
-                  <strong>Allica Bank</strong> and{" "}
-                  <strong>Aldermore</strong> on the trading-business
+                  Cambridge and Counties,{" "}
+                  Allica Bank and{" "}
+                  Aldermore on the trading-business
                   panel. Independent F&amp;B freeholds on Bedford
                   Place and Oxford Street price 7.0 to 8.5 percent
                   pa at 60 to 65 percent LTV.
@@ -1117,12 +1117,12 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   SO17 typically run 400,000 to 1.2 million pounds.
                   HMO acquisition or refinance prices 7.0 to 8.5
                   percent pa at 65 to 75 percent LTV through{" "}
-                  <strong>Paragon</strong>,{" "}
-                  <strong>Together</strong> and Foundation Home
+                  Paragon,{" "}
+                  Together and Foundation Home
                   Loans on the HMO specialist panel alongside{" "}
-                  <strong>YBS Commercial</strong>,{" "}
-                  <strong>HTB</strong> and{" "}
-                  <strong>Aldermore</strong> on the wider HMO and
+                  YBS Commercial,{" "}
+                  HTB and{" "}
+                  Aldermore on the wider HMO and
                   semi-commercial panel.
                 </p>
               </div>
@@ -1188,12 +1188,12 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   bank panels. Logistics investment with strong
                   unexpired runs 6.5 to 7.5 percent pa at 65 to 70
                   percent LTV through{" "}
-                  <strong>Allica Bank</strong>,{" "}
-                  <strong>HTB</strong>,{" "}
-                  <strong>OakNorth</strong>,{" "}
-                  <strong>Cambridge and Counties</strong>,{" "}
-                  <strong>YBS Commercial</strong> and{" "}
-                  <strong>Aldermore</strong> on the challenger panel.
+                  Allica Bank,{" "}
+                  HTB,{" "}
+                  OakNorth,{" "}
+                  Cambridge and Counties,{" "}
+                  YBS Commercial and{" "}
+                  Aldermore on the challenger panel.
                   Owner-occupier trade-counter and small industrial
                   freehold on Nursling Industrial Estate, Test Lane
                   and Adanac Park prices 6.75 to 8.0 percent pa at
@@ -1204,9 +1204,9 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   Hospitality trading-business is the toughest
                   segment: typically 7.5 to 9.0 percent pa at 60 to
                   70 percent LTV, with{" "}
-                  <strong>Cambridge and Counties</strong>,{" "}
-                  <strong>Allica Bank</strong> and{" "}
-                  <strong>Aldermore</strong> the most active SME
+                  Cambridge and Counties,{" "}
+                  Allica Bank and{" "}
+                  Aldermore the most active SME
                   trading-business names on the Town Quay, cruise
                   terminal and Ocean Village hospitality flank.
                   Independent hotel freeholds on Town Quay and the
@@ -1215,7 +1215,7 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   clean trading accounts. Larger branded hotel
                   investment with strong covenant sits with the
                   clearing-bank corporate desks at tighter pricing
-                  alongside <strong>OakNorth</strong> on the larger
+                  alongside OakNorth on the larger
                   SME cases above 2 million pounds.
                 </p>
                 <p>
@@ -1223,21 +1223,21 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   professional sharer stock through the Highfield,
                   Portswood and Bevois Valley belt runs 7.0 to 8.5
                   percent pa at 65 to 75 percent LTV.{" "}
-                  <strong>Paragon</strong> and{" "}
-                  <strong>Together</strong> anchor the HMO specialist
+                  Paragon and{" "}
+                  Together anchor the HMO specialist
                   panel alongside Foundation Home Loans, with
                   Southampton portfolio refinancers particularly
-                  valuing <strong>Paragon</strong> and{" "}
-                  <strong>Together</strong> for the depth of
+                  valuing Paragon and{" "}
+                  Together for the depth of
                   portfolio coverage on multi-asset HMO cases.
                   Semi-commercial mixed-use shop-with-flats on
                   Portswood, Bevois Valley, Bedford Place, Bargate
                   Quarter and East Street runs up to 75 percent LTV
                   at 7.0 to 8.0 percent pa across the strong
                   shop-with-flat archetype with{" "}
-                  <strong>YBS Commercial</strong>,{" "}
-                  <strong>HTB</strong> and{" "}
-                  <strong>Aldermore</strong> consistently competitive.
+                  YBS Commercial,{" "}
+                  HTB and{" "}
+                  Aldermore consistently competitive.
                   Bridging across the catchment sits at 0.75 to 1.10
                   percent per month on the mainstream specialist
                   desks, with the cleanest cases on lower-LTV
@@ -1248,15 +1248,15 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   Lender appetite splits by sector. Industrial and
                   port logistics is the most contested asset class in
                   Southampton, with{" "}
-                  <strong>Allica Bank</strong>,{" "}
-                  <strong>OakNorth</strong>,{" "}
-                  <strong>Cambridge and Counties</strong>,{" "}
-                  <strong>HTB</strong> and{" "}
-                  <strong>YBS Commercial</strong> bidding into the
+                  Allica Bank,{" "}
+                  OakNorth,{" "}
+                  Cambridge and Counties,{" "}
+                  HTB and{" "}
+                  YBS Commercial bidding into the
                   M271 corridor cases. HMO and portfolio is the
                   second most active segment, with{" "}
-                  <strong>Paragon</strong> and{" "}
-                  <strong>Together</strong> writing the bulk of the
+                  Paragon and{" "}
+                  Together writing the bulk of the
                   Highfield, Portswood and Bevois Valley student and
                   professional sharer refinance pipeline. The
                   clearing banks at NatWest Commercial, Lloyds Bank
@@ -1267,15 +1267,15 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   and central professional services freehold flank.
                   The challenger SME panel writes the bulk of the
                   mid-market:{" "}
-                  <strong>Allica Bank</strong>,{" "}
-                  <strong>HTB</strong>,{" "}
-                  <strong>Cambridge and Counties</strong>,{" "}
-                  <strong>YBS Commercial</strong>,{" "}
-                  <strong>Aldermore</strong> and{" "}
-                  <strong>OakNorth</strong> sit at the centre of the
+                  Allica Bank,{" "}
+                  HTB,{" "}
+                  Cambridge and Counties,{" "}
+                  YBS Commercial,{" "}
+                  Aldermore and{" "}
+                  OakNorth sit at the centre of the
                   specialist pool, with{" "}
-                  <strong>Paragon</strong> and{" "}
-                  <strong>Together</strong> anchoring the HMO and
+                  Paragon and{" "}
+                  Together anchoring the HMO and
                   semi-commercial flank. Foundation Home Loans sits
                   on the wider HMO panel alongside the eight on our
                   active list. The wider ninety-strong panel rounds
@@ -1484,7 +1484,7 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   Park M271 junction, seven years of clean trading
                   accounts and strong logistics-corridor covenant.
                   Combined building purchase and working-capital
-                  facility with <strong>Allica Bank</strong>. 65% LTV
+                  facility with Allica Bank. 65% LTV
                   at 7.15% pa, five-year fix, 20-year amortisation.
                   The depth of M27 corridor labour shed and the
                   Hampshire-wide industrial yield read supported the
@@ -1498,7 +1498,7 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   An investor with five Highfield and Portswood
                   student HMOs across SO17 consolidating four
                   short-dated facilities onto a single portfolio loan
-                  with <strong>Paragon</strong>. 75% LTV at 7.55% pa,
+                  with Paragon. 75% LTV at 7.55% pa,
                   five-year fix, 25-year amortisation. Stabilised
                   assured shorthold income with the University of
                   Southampton catchment underpinning the rent roll.
@@ -1513,7 +1513,7 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   marina-front restaurant at Ocean Village refinancing
                   off a 2021 five-year fix into a stabilised
                   trading-business facility with{" "}
-                  <strong>Cambridge and Counties</strong>. 65% LTV at
+                  Cambridge and Counties. 65% LTV at
                   7.95% pa, five-year fix, 20-year amortisation. Three
                   years of clean trading accounts post-pandemic,
                   EBITDA cover comfortably above 1.5 times. The
@@ -1528,7 +1528,7 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   A private investor with four Bedford Place and
                   Polygon shop-with-flats consolidating three
                   short-dated facilities onto a single commercial
-                  portfolio loan with <strong>HTB</strong>. 70% LTV at
+                  portfolio loan with HTB. 70% LTV at
                   7.55% pa, five-year fix, 25-year amortisation.
                   Stabilised mixed Class E ground floor and assured
                   shorthold residential income above, with strong
@@ -1543,7 +1543,7 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                   commercial scheme on the East Street parade with
                   conditions discharged through the 26/00205/DIS
                   application. 65% LTV at 6.95% pa with{" "}
-                  <strong>YBS Commercial</strong>, five-year fix,
+                  YBS Commercial, five-year fix,
                   25-year amortisation. The Bargate Quarter
                   regeneration backdrop and the central retail
                   footfall context supported the investment underwrite
@@ -1685,14 +1685,14 @@ export default function SouthamptonCommercialPropertyMarket2026() {
                     trading position or rental income, and we will
                     take it from there. We shortlist three to five
                     lenders from the eight on our active panel,{" "}
-                    <strong>Allica Bank</strong>,{" "}
-                    <strong>HTB</strong>,{" "}
-                    <strong>Cambridge and Counties</strong>,{" "}
-                    <strong>YBS Commercial</strong>,{" "}
-                    <strong>Aldermore</strong>,{" "}
-                    <strong>Paragon</strong>,{" "}
-                    <strong>Together</strong> and{" "}
-                    <strong>OakNorth</strong>, plus the wider
+                    Allica Bank,{" "}
+                    HTB,{" "}
+                    Cambridge and Counties,{" "}
+                    YBS Commercial,{" "}
+                    Aldermore,{" "}
+                    Paragon,{" "}
+                    Together and{" "}
+                    OakNorth, plus the wider
                     ninety-strong network including Foundation Home
                     Loans on the HMO portfolio flank and the clearing
                     banks on the prime investment and M271 logistics

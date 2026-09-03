@@ -26,7 +26,7 @@ export const homeMarketSnapshot: HomeMarketSnapshot = {
       footnote: "From complete enquiry",
     },
     {
-      value: "£250M+",
+      value: "£400M+",
       label: "Arranged",
       footnote: "Across the network",
     },

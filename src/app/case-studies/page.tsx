@@ -9,7 +9,7 @@ const loc = siteConfig.locationName;
 
 export const metadata: Metadata = {
   title: `${loc} Commercial Mortgage Case Studies | Logistics, Hospitality, Healthcare, HMO Portfolio`,
-  description: `Real ${loc} commercial mortgage case studies, port-and-logistics, owner-occupier, investment, semi-commercial, trading-business and portfolio refinance deals across Adanac Park M271, Highfield HMO, Ocean Village, Bassett dental, Westquay, Bedford Place, Mayflower Quarter, Bitterne, Cumberland Place and Hedge End.`,
+  description: `Illustrative ${loc} commercial mortgage scenarios, port-and-logistics, owner-occupier, investment, semi-commercial, trading-business and portfolio refinance deals across Adanac Park M271, Highfield HMO, Ocean Village, Bassett dental, Westquay, Bedford Place, Mayflower Quarter, Bitterne, Cumberland Place and Hedge End.`,
   alternates: { canonical: `https://${siteConfig.domain}/case-studies` },
 };
 
@@ -25,12 +25,12 @@ export default function CaseStudiesPage() {
               {loc} Commercial Mortgage Case Studies
             </h1>
             <p className="mt-6 text-xl leading-relaxed text-gray-300">
-              Representative {loc} and Solent corridor commercial mortgages
-              we&apos;ve placed recently across port-and-logistics, healthcare
-              ancillary, university HMO portfolio refinance, hospitality,
+              Illustrative {loc} and Solent corridor commercial mortgage
+              scenarios across port-and-logistics, healthcare ancillary,
+              university HMO portfolio refinance, hospitality,
               owner-occupier freehold, investment and semi-commercial. Product
-              type, lender, pricing and the reason the file landed where it
-              did.
+              type, lender, pricing and the reason the file would land where
+              it did.
             </p>
           </div>
         </div>
@@ -70,14 +70,18 @@ export default function CaseStudiesPage() {
                         </li>
                       ))}
                     </ul>
+                    <p className="mt-4 border-t border-gray-100 pt-3 text-xs uppercase tracking-wider text-gray-500">
+                      Illustrative example — not a completed transaction
+                    </p>
                   </div>
                 </ScrollReveal>
               ))}
             </div>
             <p className="mt-8 text-xs text-gray-500">
-              Case studies are representative examples. Names and identifying
-              detail are anonymised at the borrower&apos;s request. Lender
-              attributions reflect deals placed within the past 24 months.
+              These are illustrative scenarios built from typical {loc} and
+              Solent corridor deal structures and current panel pricing, not
+              records of specific completed transactions. Names, addresses
+              and figures are composite and do not identify any borrower.
             </p>
           </div>
         </div>
